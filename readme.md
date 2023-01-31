@@ -1,4 +1,4 @@
-### Typescript and React
+# Typescript and React
 
 - checks data types even down to reactElements, HTMLDivElement etc
 - add https://typescript-eslint.io/ for extra layer of checking
@@ -15,12 +15,12 @@
 - lint
 - typecheck
 
-# variable declaration
+## variable declaration
 
 let age = 6; shows as type number. 6 can be reassigned but keeps type. TS infer
 const age = 6; type shows as 6. this cannot be reassigned, and because number is immutable then it means 6 will always be 6. literal type
 
-# function arguments and return values
+## function arguments and return values
 
 can declare both argument types and the return type.
 
@@ -28,7 +28,7 @@ can declare both argument types and the return type.
 
 by declaring the return type this is effective way to cover all ground of null/undefined outputs etc.
 
-# objects
+## objects
 
 `{`
 `make: "Toyota",`
@@ -44,7 +44,16 @@ would be defined as
 ` year: number`
 `}`
 
-# optional properties
+### objects within functions
+
+`function doSomething(car: {`
+` make: string`
+` model: string`
+` year: number`
+` chargeVoltage? : number`
+`}) {}`
+
+## optional properties
 
 use ? chaining operator. means will either be number or undefined. it can also be left out completely
 
@@ -55,6 +64,6 @@ use ? chaining operator. means will either be number or undefined. it can also b
 `chargeVoltage?: number`
 `}`
 
-# excess property checking
+## excess property checking
 
 if passing in another type when running a function e.g not already defined, TS will throw error
